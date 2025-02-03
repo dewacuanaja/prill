@@ -1,0 +1,26 @@
+name: Update JSON File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update JSON
+        run: |
+          echo "Updating JSON file"
+          # Update or modify JSON file content here
+          echo '{"products": [{"id": 1, "productName": "Updated Product"}]}' > products.json
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: "Your Name"
+          author_email: "your-email@example.com"
+          message: "Update JSON file"
