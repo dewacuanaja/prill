@@ -16,6 +16,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install axios
+    - name: Debug GH_TOKEN
+      run: echo "GH_TOKEN=$GH_TOKEN"
 
       - name: Run update-json script
         run: node update-json.js
