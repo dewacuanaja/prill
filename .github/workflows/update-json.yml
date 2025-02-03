@@ -1,34 +1,23 @@
-name: Update JSON File on GitHub
+name: Update JSON File
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'test.json'  # Update hanya ketika file test.json berubah
+  workflow_dispatch:
 
 jobs:
   update-json:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+        uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: npm install
+        run: npm install axios
 
-      - name: Run update script
+      - name: Run update-json script
         run: node update-json.js
-
-      - name: Commit changes
-        run: git commit -am "Update JSON file with product data"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Push changes
-        run: git push
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
