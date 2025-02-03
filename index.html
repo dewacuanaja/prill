@@ -4,33 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produk Editor dengan Toggle</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
   <style>
-    /* Styling dasar menggunakan font Poppins */
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    h2 {
-      text-align: center;
-      margin-top: 20px;
-      color: #333;
+      font-family: Arial, sans-serif;
     }
 
     .product-container {
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 400px;
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 300px;
       margin-bottom: 20px;
     }
 
@@ -38,71 +22,35 @@
       width: 100%;
       height: auto;
       border-radius: 8px;
-      margin-bottom: 15px;
     }
 
     .product-container h3 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 10px;
+      font-size: 18px;
     }
 
     .product-container p {
-      color: #ff5722;
-      font-weight: 500;
+      color: #ff0000;
     }
 
-    .product-container a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-
-    .product-container a:hover {
-      text-decoration: underline;
-    }
-
-    /* Styling untuk form edit produk */
-    .product-form {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 400px;
-      margin: 20px auto;
-    }
-
-    .product-form label {
-      font-weight: 500;
-      margin-bottom: 5px;
-      display: block;
-    }
-
-    .product-form input {
+    .product-form input, .product-form textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+      padding: 8px;
+      margin: 5px 0;
     }
 
     .product-form button {
-      background-color: #4caf50;
+      background-color: #ff6700;
       color: white;
-      padding: 12px 20px;
+      padding: 10px 15px;
+      cursor: pointer;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      font-weight: 600;
     }
 
     .product-form button:hover {
-      background-color: #45a049;
+      background-color: #e55d00;
     }
 
-    /* Toggle switch styling */
     .toggle-switch {
       position: relative;
       display: inline-block;
@@ -147,7 +95,6 @@
     input:checked + .slider:before {
       transform: translateX(26px);
     }
-
   </style>
 </head>
 <body>
@@ -156,7 +103,6 @@
 
   <div id="productList"></div>
 
-  <!-- Form untuk mengedit produk -->
   <div class="product-form">
     <h3>Edit Produk</h3>
     <label for="productName">Nama Produk:</label>
@@ -178,7 +124,7 @@
   </div>
 
   <script>
-    const productDataURL = './assets/test.json'; // Ganti dengan relative path jika file JSON di folder yang sama
+    const productDataURL = 'https://raw.githubusercontent.com/dewacuanaja/prill/main/test.json'; // Ganti dengan URL JSON Anda
     let products = [];
 
     // Ambil data produk dari JSON
