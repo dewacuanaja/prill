@@ -1,0 +1,34 @@
+name: Update JSON File on GitHub
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'test.json'  # Update hanya ketika file test.json berubah
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run update script
+        run: node update-json.js
+
+      - name: Commit changes
+        run: git commit -am "Update JSON file with product data"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push changes
+        run: git push
