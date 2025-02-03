@@ -51,6 +51,7 @@
       background-color: #e55d00;
     }
 
+    /* Toggle switch style */
     .toggle-switch {
       position: relative;
       display: inline-block;
@@ -95,6 +96,7 @@
     input:checked + .slider:before {
       transform: translateX(26px);
     }
+
   </style>
 </head>
 <body>
@@ -132,7 +134,13 @@
       fetch(productDataURL)
         .then(response => response.json())
         .then(data => {
-          products = data.products;
+          // Cek apakah data produk sudah ada di localStorage, jika ada, ambil dari sana
+          const savedProducts = localStorage.getItem('products');
+          if (savedProducts) {
+            products = JSON.parse(savedProducts);
+          } else {
+            products = data.products;
+          }
           renderProductList();
         })
         .catch(error => console.error('Error loading product data:', error));
@@ -177,7 +185,7 @@
       }
     }
 
-    // Simpan perubahan produk
+    // Simpan perubahan produk ke localStorage
     function saveProduct(productId) {
       const product = products.find(p => p.id === productId);
       if (product) {
@@ -186,6 +194,9 @@
         product.imageURL = document.getElementById('imageURL').value;
         product.discount = document.getElementById('discount').value;
         product.display = document.getElementById('display').checked;
+
+        // Simpan ke localStorage
+        localStorage.setItem('products', JSON.stringify(products));
 
         alert('Produk berhasil disimpan!');
         renderProductList(); // Render ulang daftar produk setelah disimpan
@@ -198,6 +209,9 @@
       if (product) {
         product.display = !product.display; // Toggle display value
         alert(`Produk ${product.display ? 'Ditampilkan' : 'Disembunyikan'}`);
+        
+        // Simpan perubahan ke localStorage
+        localStorage.setItem('products', JSON.stringify(products));
       }
     }
 
