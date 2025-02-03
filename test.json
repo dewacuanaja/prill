@@ -7,7 +7,7 @@
       "productName": "WHITENING BODY BLEACHING BUBBLY CANDY + FREE BUBUK COLLAGEN",
       "discount": "Diskon 50% Off!",
       "shopeeLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/2560px-Shopee.svg.png",
-      "display": true
+      "display": false
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "productName": "Madu Tonik Pewe Asli Madukuat Herbal Stamina Maksimal Kuat Tahan",
       "discount": "Diskon 30% Off!",
       "shopeeLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/2560px-Shopee.svg.png",
-      "display": false
+      "display": true
     }
   ]
 }
