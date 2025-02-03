@@ -20,4 +20,4 @@ jobs:
       - name: Run update-json script
         run: node update-json.js
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Menggunakan token yang telah disimpan di Secrets
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Pastikan GH_TOKEN dipanggil dengan benar
