@@ -1,26 +1,24 @@
-name: Update JSON File
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
   update-json:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Update JSON
+      - name: Update JSON file
         run: |
-          echo "Updating JSON file"
-          # Update or modify JSON file content here
           echo '{"products": [{"id": 1, "productName": "Updated Product"}]}' > products.json
 
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Commit and push changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: "Your Name"
-          author_email: "your-email@example.com"
-          message: "Update JSON file"
+        run: |
+          git add products.json
+          git commit -m "Update JSON file"
+          git push https://github.com/${{ github.repository }} HEAD:${{ github.ref }} --force
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Menggunakan token dari GitHub Secrets
