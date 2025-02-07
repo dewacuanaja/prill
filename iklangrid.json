@@ -1,51 +1,44 @@
 [
   {
-    "title": "Minyak Kelapa Murni",
-    "image": "https://down-id.img.susercontent.com/file/id-11134207-7rasf-m3otgi8ohsre34.webp",
-    "price": "Rp 100.000",
-    "discount": "Diskon 40%",
-    "link": "https://shopee.co.id/Minyak-Kelapa-Murni"
-  },
-  {
-    "title": "Dress Cantik Polos",
-    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul2-lfqg92vklcgd4d.webp",
+    "link": "https://s.shopee.co.id/8fDDex5KYm",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul2-lfqg92vklcgd4.webp",
+    "alt": "Dress 1",
     "price": "Rp 150.000",
-    "discount": "Diskon 30%",
-    "link": "https://s.shopee.co.id/8fDDex5KYm"
+    "discount": "Diskon 20%"
   },
   {
-    "title": "Outer Wanita Modern",
+    "link": "https://s.shopee.co.id/8fDDex5KYm",
     "image": "https://down-id.img.susercontent.com/file/id-11134207-7r98w-llw2ulisicgc12.webp",
+    "alt": "Dress 2",
     "price": "Rp 200.000",
-    "discount": "Diskon 25%",
-    "link": "https://s.shopee.co.id/8fDDex5KYm"
+    "discount": "Diskon 30%"
   },
   {
-    "title": "Celana Jeans Pria",
+    "link": "https://s.shopee.co.id/8fDDex5KYm",
     "image": "https://down-id.img.susercontent.com/file/id-11134207-7qul8-lfqg92vklcr242.webp",
-    "price": "Rp 250.000",
-    "discount": "Diskon 50%",
-    "link": "https://s.shopee.co.id/8fDDex5KYm"
+    "alt": "Dress 3",
+    "price": "Rp 180.000",
+    "discount": "Diskon 25%"
   },
   {
-    "title": "Jaket Hoodie Oversize",
+    "link": "https://s.shopee.co.id/8fDDex5KYm",
     "image": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-llw2ulisgxvw75.webp",
-    "price": "Rp 300.000",
-    "discount": "Diskon 35%",
-    "link": "https://s.shopee.co.id/6KpJ9BW1DC"
+    "alt": "Dress 4",
+    "price": "Rp 220.000",
+    "discount": "Diskon 15%"
   },
   {
-    "title": "Tas Selempang Kulit",
+    "link": "https://s.shopee.co.id/6KpJ9BW1DC",
     "image": "https://down-id.img.susercontent.com/file/sg-11134201-7qvem-lgc58vzznd8551.webp",
-    "price": "Rp 400.000",
-    "discount": "Diskon 20%",
-    "link": "https://s.shopee.co.id/6KpJ9BW1DC"
+    "alt": "Dress 5",
+    "price": "Rp 250.000",
+    "discount": "Diskon 35%"
   },
   {
-    "title": "Sepatu Sneakers Putih",
-    "image": "https://down-id.img.susercontent.com/file/id-11134207-7ras9-m4d4ypw8zosa6b.webp",
-    "price": "Rp 500.000",
-    "discount": "Diskon 15%",
-    "link": "https://s.shopee.co.id/5AdLjp4kPF"
+    "link": "https://s.shopee.co.id/6KpJ9BW1DC",
+    "image": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m5co8axkvu94f4.webp",
+    "alt": "Dress 6",
+    "price": "Rp 300.000",
+    "discount": "Diskon 10%"
   }
 ]
