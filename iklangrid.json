@@ -41,11 +41,12 @@
     "price": "Rp 300.000",
     "discount": "Diskon 10%"
   },
-    {
-    "link": "https://s.shopee.co.id/6KpJ9BW1DC",
-    "image": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m5co8axkvu94f4.webp",
-    "alt": "Dress 7",
-    "price": "Rp 300.000",
-    "discount": "Diskon 10%"
-  }
+  {
+  "link": "https://s.shopee.co.id/6KpJ9BW1DC",
+  "image": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m5co8axkvu94f4.webp",
+  "alt": "Dress 7 - Gaun Elegan Warna Hitam Polos",
+  "price": "Rp 320.000",
+  "discount": "Diskon 20%"
+}
+
 ]
